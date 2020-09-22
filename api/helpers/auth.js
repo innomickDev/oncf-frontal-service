@@ -8,6 +8,8 @@ const errorResponse = require("../../config/errorResponse").customError
 //that need it (in our case, only /protected). This
 //function will be called every time a request to a protected
 //endpoint is received
+
+
 const verifyToken = function (req, authOrSecDef, token, callback) {
   //these are the scopes/roles defined for the current endpoint
   var currentScopes = req.swagger.operation["x-security-scopes"];
